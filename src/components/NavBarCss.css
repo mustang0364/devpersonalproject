@@ -1,0 +1,40 @@
+
+.navbar-default {
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    z-index: 2;
+    background: red
+  }
+  
+  .navbar-default .navbar-nav > li > a {
+    color:black;
+    
+  }
+  
+  .navbar-default .navbar-brand {
+    color:black;
+    font-family: 'Amatic SC';
+  }
+  
+  .navbar-default .navbar-toggle {
+    border-color:blue;
+  }
+  
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color:blue;
+  }
+  
+  .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+  }
+  
+  .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color:blue;
+    background-color: transparent;
+  }
+  
+  .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color:blue;
+    background-color: transparent;
+  }
