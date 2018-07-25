@@ -14,7 +14,7 @@ export default  class Video  extends Component {
               <CustomNavBar/>
                 
              </video>
-             <h1 className="test">This is another test</h1>
+             <h1 className="test">Files component </h1>
              </div>
          );
     }

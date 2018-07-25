@@ -16,12 +16,12 @@ export default class Home extends Component {
 
   render() {
     return (
-     
+      
       <Grid>
-       
+     
     
         <Jumbotron>
-
+      
           <h2>Y.O.L.O</h2>
           <p>"We have stopped for a moment to encounter each other, to meet, to love, to share. This is a precious moment. It is a little parenthesis in eternity."</p>
           <Link to="/about">
@@ -43,9 +43,9 @@ export default class Home extends Component {
           <Col xs={12} sm={4} className="person-wrapper">
             <Image src="media/club.jpg" circle className="profile-pic"/>
             <h3>Live</h3>
-            <p>That's a crooked tree. We'll send him to Washington. These little son of a guns hide in your brush and you just have to push them out.</p>
+            <p>Because at the end is all about the experience</p>
           </Col>
-          
+   
         </Row>
         
       </Grid>
