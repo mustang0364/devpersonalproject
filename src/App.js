@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Navbar from './components/CustomNavBar';
 import News from './components/News';
 import About from './components/About'
+import Map from './components/Map';
 import './App.css';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 
@@ -55,14 +56,7 @@ class App extends Component {
     })
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
+
   render() {
     const { user, secureDataResponse } = this.state;
     const userData = JSON.stringify(user, null, 2);
@@ -96,6 +90,7 @@ class App extends Component {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/news" component={News} />
+        <Route path="/map" component ={Map}/>
         </div>
         </Router>
         </div>

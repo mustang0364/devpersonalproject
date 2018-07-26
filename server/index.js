@@ -51,6 +51,7 @@ app.get('/auth/callback',(req,res)=>{
           if (users.length) {
             const user = user[0];
             req.session.user = user;
+            console.log(user)
             res.redirect('/');
           } else {
             const createUserData = {
