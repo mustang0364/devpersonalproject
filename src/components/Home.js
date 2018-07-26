@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+//import Video from './Video';
 import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 
 import './Home.css';
@@ -21,9 +22,10 @@ export default class Home extends Component {
      
     
         <Jumbotron>
-      
+   
           <h2>Y.O.L.O</h2>
-          <p>"We have stopped for a moment to encounter each other, to meet, to love, to share. This is a precious moment. It is a little parenthesis in eternity."</p>
+       
+          <p className="par">"We have stopped for a moment to encounter each other, to meet, to love, to share. This is a precious moment. It is a little parenthesis in eternity."</p>
           <Link to="/about">
             <Button bsStyle="primary">Lives More</Button>
           </Link>
@@ -52,6 +54,5 @@ export default class Home extends Component {
     )
   }
 }
-
 
 

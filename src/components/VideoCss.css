@@ -13,7 +13,7 @@
          position:absolute;
          top: 0;
          left: 0;
-         zIndex: 2;
+         /* z-index:  2; */
          margin: 0;
          padding: 0
     }
@@ -21,6 +21,6 @@
         position: absolute;
         top: 0;
         left:40%;
-        zIndex:5;
+        /* zIndex:5; */
         color: red
     }
