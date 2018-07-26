@@ -6,6 +6,7 @@ import Navbar from './components/CustomNavBar';
 import News from './components/News';
 import About from './components/About'
 import Map from './components/Map';
+import Contact from './components/Contact';
 import './App.css';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 
@@ -58,8 +59,8 @@ class App extends Component {
   
 
   render() {
-    const { user, secureDataResponse } = this.state;
-    const userData = JSON.stringify(user, null, 2);
+    // const { user, secureDataResponse } = this.state;
+    // const userData = JSON.stringify(user, null, 2);
     
     return (
       
@@ -72,15 +73,15 @@ class App extends Component {
             <button onClick={this.logout}>Log out</button>
           </div>
           
-          <div className="section">
+          {/* <div className="section">
             <h2>User data:</h2>
             <div><pre>{userData || 'null'}</pre></div>
-          </div>
+          </div> */}
 
-          <div className="section">
+          {/* <div className="section">
             <button onClick={this.fetchSecureData}>Fetch secure data</button>
             <div><pre>{secureDataResponse}</pre></div>
-          </div>
+          </div> */}
       
       
           <Router>
@@ -91,6 +92,7 @@ class App extends Component {
         <Route path="/about" component={About} />
         <Route path="/news" component={News} />
         <Route path="/map" component ={Map}/>
+        <Route path="/contact" component ={Contact}/>
         </div>
         </Router>
         </div>

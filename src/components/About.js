@@ -6,8 +6,9 @@ import './About.css';
 export default class About extends Component {
   render() {
     return (
+  
       <div>
- 
+             
         <Image src="media/oceanPoolr.jpg" className="header-image" />
         <Grid>
           <Col xs={12} sm={8} smOffset={2}>
