@@ -7,6 +7,7 @@ import News from './components/News';
 import About from './components/About'
 import Map from './components/Map';
 import Contact from './components/Contact';
+import Crypto from './components/Crypto';
 import './App.css';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 
@@ -83,7 +84,7 @@ class App extends Component {
             <div><pre>{secureDataResponse}</pre></div>
           </div> */}
       
-      
+  
           <Router>
       <div>
         
@@ -93,6 +94,7 @@ class App extends Component {
         <Route path="/news" component={News} />
         <Route path="/map" component ={Map}/>
         <Route path="/contact" component ={Contact}/>
+        <Route path="/crypto" component ={Crypto}/>
         </div>
         </Router>
         </div>
