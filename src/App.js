@@ -6,8 +6,10 @@ import Navbar from './components/CustomNavBar';
 import News from './components/News';
 import About from './components/About'
 import Map from './components/Map';
-import Contact from './components/Contact';
-import Crypto from './components/Crypto';
+import KeepInTouch from  './components/KeepInTouch'
+
+import Places from './components/Places';
+// import Crypto from './components/Crypto';
 import './App.css';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 
@@ -72,34 +74,41 @@ class App extends Component {
             <button onClick={this.login}>Log in</button>
             {' '}
             <button onClick={this.logout}>Log out</button>
+           
           </div>
           
           {/* <div className="section">
             <h2>User data:</h2>
             <div><pre>{userData || 'null'}</pre></div>
-          </div> */}
+          </div>
 
-          {/* <div className="section">
+          <div className="section">
             <button onClick={this.fetchSecureData}>Fetch secure data</button>
             <div><pre>{secureDataResponse}</pre></div>
-          </div> */}
-      
-  
+          </div> 
+       */}
+           
           <Router>
       <div>
-        
+
         <Navbar/>
+        
+       
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/news" component={News} />
         <Route path="/map" component ={Map}/>
-        <Route path="/contact" component ={Contact}/>
-        <Route path="/crypto" component ={Crypto}/>
-        </div>
+        <Route path="/keepInTouch" component ={KeepInTouch}/>
+       
+     
+     </div>
+     
         </Router>
+    
         </div>
+     
         </div>
-
+  
       
 
     

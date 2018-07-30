@@ -33,12 +33,10 @@ export default class CustomNavbar extends Component {
             <NavItem>
               Log Out
             </NavItem>
-            <NavItem eventKey={5} componentClass={Link} href="/contact" to="/contact" >
-              Contact
+            <NavItem eventKey={5} componentClass={Link} href="/keepintouch" to="/keepintouch" >
+          Keep In Touch
             </NavItem>
-            {/* <NavItem eventKey={6} componentClass={Link} href="/crypto" to="/crypto" >
-              Crypto
-            </NavItem> */}
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>

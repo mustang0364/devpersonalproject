@@ -2,7 +2,8 @@ const express = require ('express');
 const bodyParser = require ('body-parser');
 const session = require ('express-session');
 const massive = require ('massive');
-const axios = require ('axios')
+const axios = require ('axios');
+
 
 require ('dotenv').config();
 massive(process.env.CONNECTION_STRING).then(db => app.set('db',db))
@@ -49,7 +50,7 @@ app.get('/auth/callback',(req,res)=>{
         return req.app.get('db').find_user_by_auth0_id(auth0id).then(users => {
           console.log('users', users)
           if (users.length) {
-            const user = user[0];
+            const user = users[0];
             req.session.user = user;
             console.log(user)
             res.redirect('/');

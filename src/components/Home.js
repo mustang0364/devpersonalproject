@@ -33,7 +33,9 @@ export default class Home extends Component {
       
         <Row className="show-grid text-center">
           <Col xs={12} sm={4} className="person-wrapper">
+            <Link to ="/places">
             <Image src="media/van.jpg" circle className="profile-pic"/>
+            </Link>
             <h3>Travel</h3>
             <p>Twenty years from now you will be more disappointed by the things you didn't do than by the ones you did. So throw off the bowlines, sail away from the safe harbor. Catch the trade winds in you sail. Explore. Dream. Discover.</p>
           </Col>
