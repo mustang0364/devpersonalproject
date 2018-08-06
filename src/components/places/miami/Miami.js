@@ -40,12 +40,12 @@ class Miami extends Component {
         const { score, likes } = this.state
         return (
             <figure className="snip1493"  onClick={() => this.instagramLike()}>
-            <div className="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/ls-sample3.jpg" alt="ls-sample3" /></div>
+            <div className="image"><img src="media/beach.jpg" alt="ls-sample3" /></div>
             <figcaption>
               <div className="date"><span className="day">05</span><span className="month">March</span></div>
-              <h3>Down with this sort of thing</h3>
+              <h3>Sunshine state</h3>
               <p>
-                I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway.
+              “Remember that wherever your heart is, there you will find your treasure.” 
               </p>
               <footer>
                 <div className="views"><i className="ion-eye" />928</div>

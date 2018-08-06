@@ -40,10 +40,10 @@ class Havana extends Component {
         const { score, likes } = this.state
         return (
             <figure className="snip1493"  onClick={() => this.instagramLike()}>
-            <div className="image"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/ls-sample3.jpg" alt="ls-sample3" /></div>
+            <div className="image"><img src="media/diving.jpg" alt="ls-sample3" /></div>
             <figcaption>
               <div className="date"><span className="day">01</span><span className="month">Dec</span></div>
-              <h3>Down with this sort of thing</h3>
+              <h3>Dive the Ocean, Thailand </h3>
               <p>
                 I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway.
               </p>

@@ -51,12 +51,12 @@ export default class Places extends Component {
 
  <div>
       <figure className="snip1493"onClick={() => this.instagramLike()} >
-        <div className="image"  ><img src="media/havana.jpg" alt="ls-sample1" /></div>
+        <div className="image"  ><img src="media/mesa.jpg" alt="ls-sample1" /></div>
         <figcaption>
         <div className="date"><span className="day">28</span><span className="month">Oct</span></div>
-          <h3>The World Ended Yesterday</h3>
+          <h3>The Burning Man</h3>
           <p>
-            You know what we need, Hobbes? We need an attitude. Yeah, you can't be cool if you don't have an attitude.
+            The City in the desert.
           </p>
           <footer>
           <div className="views"><i className="ion-eye"  />1,870</div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Information from './Information';
 import './profile.css'
 
 
@@ -15,7 +16,7 @@ class Contact extends Component {
                   </div>
                   <div className="profile-user-settings">
                     <h1 className="profile-user-name">jamesBond</h1>
-                    <div className="profile-edit-btn">Edit Profile</div>
+                   <div className="profile-edit-btn">Edit Profile</div>
                     <div className="profile-settings-btn"><i className="fas fa-cog" /></div>
                   </div>
                   <div className="profile-stats">
@@ -168,6 +169,7 @@ class Contact extends Component {
               </div>
               {/* End of container */}
             </main>
+            <Information/>
           </div>
         );
       }

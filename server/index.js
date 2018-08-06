@@ -3,6 +3,8 @@ const bodyParser = require ('body-parser');
 const session = require ('express-session');
 const massive = require ('massive');
 const axios = require ('axios');
+const cloudinary=require('cloudinary');
+require('dotenv').config();
 
 
 require ('dotenv').config();
@@ -108,7 +110,20 @@ app.get('/auth/callback',(req,res)=>{
       console.log('Server listening on port ' + SERVER_PORT);
     });
 
+//-------------------Cloudinary-------------------------------------
 
+    app.get('/api/upload', (req, res) => {
+       const timestamp = Math.round((new Date()).getTime() / 1000);
+        const api_secret  = process.env.CLOUDINARY_SECRET_API;
+       const signature = cloudinary.utils.api_sign_request({ timestamp: timestamp }, api_secret);
+        
+       const payload = {
+              signature: signature,
+              timestamp: timestamp
+          };
+              res.json(payload);
+      })
+      
 
 
 

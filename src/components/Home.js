@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Places from './Places';
 import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
-//import Cuba from './Cuba'
+
 
 import './Home.css';
 
@@ -23,7 +23,7 @@ export default class Home extends Component {
     return (
    
       <Grid>
-     
+
     
         <Jumbotron>
    
@@ -53,6 +53,7 @@ export default class Home extends Component {
             <h3>Live</h3>
             <p>Because at the end is all about the experience</p>
           </Col>
+   
    
         </Row>
  
