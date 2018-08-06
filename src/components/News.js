@@ -13,11 +13,12 @@ export default class News extends Component {
     super();
     this.state = {
         articles:[],
+       
      
       }
 }
 componentDidMount() {
-    axios.get('https://newsapi.org/v2/everything?q=bitcoin&apiKey=36fa97415dff4392a5613249d0217990').then(response =>{
+    axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=36fa97415dff4392a5613249d0217990').then(response =>{
         this.setState({
             articles:response.data.articles,
         
@@ -48,7 +49,7 @@ render() {
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </Col>
           </Row>
-          <div>  {articles[0]} </div>
+          <div>  {articles[8]} </div>
         </Grid>
 
         

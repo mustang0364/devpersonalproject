@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-//import Video from './Video';
+
+import Places from './Places';
 import { Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
+//import Cuba from './Cuba'
 
 import './Home.css';
 
@@ -16,8 +18,10 @@ export default class Home extends Component {
 
 
   render() {
+    <Places/>
+ 
     return (
-      
+   
       <Grid>
      
     
@@ -51,8 +55,9 @@ export default class Home extends Component {
           </Col>
    
         </Row>
-        
+ 
       </Grid>
+      
     )
   }
 }

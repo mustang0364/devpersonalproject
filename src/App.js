@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-//import Video from './components/Video';
+// import Video from './components/Video';
 import Home from './components/Home';
 import Navbar from './components/CustomNavBar';
 import News from './components/News';
 import About from './components/About'
 import Map from './components/Map';
-import KeepInTouch from  './components/KeepInTouch'
+import KeepInTouch from  './components/KeepInTouch';
+import Profile from './components/Profile';
+import Logos from './components/Logos';
+import Cuba from './components/Cuba'
+
 
 import Places from './components/Places';
 // import Crypto from './components/Crypto';
@@ -87,20 +91,28 @@ class App extends Component {
             <div><pre>{secureDataResponse}</pre></div>
           </div> 
        */}
-           
+         
           <Router>
       <div>
-
+      {/* <Video/> */}
+ 
+     
         <Navbar/>
-        
+      
        
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/news" component={News} />
         <Route path="/map" component ={Map}/>
         <Route path="/keepInTouch" component ={KeepInTouch}/>
+        <Route path="/places" component ={Places}/>
+        <Route path="/profile" component ={Profile}/>
+        <Route path="/logos" component ={Logos}/>
+        
+      
+    
        
-     
+      
      </div>
      
         </Router>

@@ -24,9 +24,9 @@ export default class CustomNavbar extends Component {
             <NavItem eventKey={3} componentClass={Link} href="/news" to="/news">
               News
             </NavItem>
-            <NavItem eventKey={4} componentClass={Link} href="/map" to="/map" >
+            {/* <NavItem eventKey={4} componentClass={Link} href="/map" to="/map" >
               Map
-            </NavItem>
+            </NavItem> */}
             <NavItem >
                 Log In
             </NavItem>
@@ -34,7 +34,10 @@ export default class CustomNavbar extends Component {
               Log Out
             </NavItem>
             <NavItem eventKey={5} componentClass={Link} href="/keepintouch" to="/keepintouch" >
-          Keep In Touch
+            Keep In Touch
+            </NavItem>
+            <NavItem eventKey={6} componentClass={Link} href="/profile" to="/profile" >
+            Memories
             </NavItem>
 
           </Nav>
