@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import{Link} from 'react-router-dom';
 
+
 import './KeepInTouch.css'
 
 
@@ -40,6 +41,7 @@ export default class KeepInTouch extends Component {
               </div>
           </div>
           </Link>
+        
       </div>
    
   </div>

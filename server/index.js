@@ -3,6 +3,11 @@ const bodyParser = require ('body-parser');
 const session = require ('express-session');
 const massive = require ('massive');
 const axios = require ('axios');
+const Twilio = require ('twilio');
+const chance= new require ('chance')();
+require ('dotenv').load()
+const AccessToken = Twilio.jwt.AccessToken
+const ChatGrant = AccessToken.ChatGrant
 
 const cloudinary=require('cloudinary');
 require('dotenv').config();
@@ -124,7 +129,30 @@ app.get('/auth/callback',(req,res)=>{
           };
               res.json(payload);
       })
-      
+  //---------------------Twilio-----------------//
 
 
 
+
+
+
+
+
+app.get('/token', function (req, res) {
+  const token = new AccessToken(
+
+    process.env.TWILIO_ACCOUNT_SID,
+    process.env.TWILIO_API_KEY,
+    process.env.TWILIO_API_SECRET,
+  )
+
+  token.identity = chance.name()
+  token.addGrant(new ChatGrant({
+    serviceSid: process.env.TWILIO_CHAT_SERVICE_SID
+  }))
+
+  res.send({
+    identity: token.identity,
+    jwt: token.toJwt()
+  })
+})

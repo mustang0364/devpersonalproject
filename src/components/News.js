@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Row, Col, Image } from 'react-bootstrap';
 import axios from  'axios';
 import './News.css';
+import TwilioChat from './Twilio/TwilioChat'
 
 
 import Crypto from './Crypto';
@@ -53,7 +54,7 @@ render() {
           </Row>
           <div>  {articles[8]} </div>
         </Grid>
-
+      
     
        
       </div>
