@@ -3,7 +3,7 @@ const bodyParser = require ('body-parser');
 const session = require ('express-session');
 const massive = require ('massive');
 const axios = require ('axios');
-const twilio = require('twilio') (process.env.ACCOUNT_SID,process.env.AUTH_TOKEN )
+
 const cloudinary=require('cloudinary');
 require('dotenv').config();
 
@@ -125,17 +125,6 @@ app.get('/auth/callback',(req,res)=>{
               res.json(payload);
       })
       
-//-----------------------twilio------------------------
-app.get('/api/twilioTest',function (req,res){
-  client.sendMessage({
-    to:'+15615631711',
-    from:'+19514337031',
-    body:"hello world from twilio"
-  },function(err,data){
-    if(err)console.log(err)
-          console.log(data)
-  })
-});
 
 
 
