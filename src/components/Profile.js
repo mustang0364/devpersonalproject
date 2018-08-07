@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Information from './Information';
+import Upload from './Upload';
 import './profile.css'
 
 
@@ -160,16 +160,22 @@ class Contact extends Component {
                       <ul>
                         <li className="gallery-item-likes"><i className="fas fa-heart" /> 30</li>
                         <li className="gallery-item-comments"><i className="fas fa-comment" /> 2</li>
+                        
                       </ul>
+                      
                     </div>
                   </div>
+                  <Upload/>
                 </div>
+             
                 {/* End of gallery */}
                 {/* <div className="spinner" /> */}
               </div>
+              
               {/* End of container */}
+
             </main>
-            <Information/>
+            
           </div>
         );
       }

@@ -3,6 +3,7 @@ import { Grid, Row, Col, Image } from 'react-bootstrap';
 import axios from  'axios';
 import './News.css';
 
+
 import Crypto from './Crypto';
 
 
@@ -53,7 +54,7 @@ render() {
           <div>  {articles[8]} </div>
         </Grid>
 
-        
+    
        
       </div>
     )
