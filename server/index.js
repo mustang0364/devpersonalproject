@@ -1,24 +1,27 @@
+require('dotenv').config();
+const twilio = require ('twilio');
+const chance= new require ('chance')();
+const cors = require('cors');
+const MessagingResponse=require('twilio').twiml.MessagingResponse;
+const hhtp= require('http') //outbound text ;
+
+
+
 const express = require ('express');
 const bodyParser = require ('body-parser');
 const session = require ('express-session');
 const massive = require ('massive');
 const axios = require ('axios');
-const Twilio = require ('twilio');
-const chance= new require ('chance')();
-require ('dotenv').load()
-const AccessToken = Twilio.jwt.AccessToken
-const ChatGrant = AccessToken.ChatGrant
-
 const cloudinary=require('cloudinary');
-require('dotenv').config();
 
 
-require ('dotenv').config();
+
 massive(process.env.CONNECTION_STRING).then(db => app.set('db',db))
 
 const app = express();
 app.use(bodyParser.json())
 app.use(session({
+
     secret:process.env.SESSION_SECRET,
     saveUninitialized:false,
     resave:false,
@@ -111,10 +114,7 @@ app.get('/auth/callback',(req,res)=>{
       res.json({ someSecureData: 123 });
     });
     
-    const SERVER_PORT = process.env.SERVER_PORT || 3040;
-    app.listen(SERVER_PORT, () => {
-      console.log('Server listening on port ' + SERVER_PORT);
-    });
+    
 
 //-------------------Cloudinary-------------------------------------
 
@@ -130,29 +130,86 @@ app.get('/auth/callback',(req,res)=>{
               res.json(payload);
       })
   //---------------------Twilio-----------------//
+   
 
 
+  const AccessToken = twilio.jwt.AccessToken
+  const ChatGrant = AccessToken.ChatGrant
+  
+  app.get('/token', function (req, res) {
+    const token = new AccessToken(
+  
+      process.env.TWILIO_ACCOUNT_SID,
+      process.env.TWILIO_API_KEY,
+      process.env.TWILIO_API_SECRET,
+    )
+  
+    token.identity = chance.name()
+    token.addGrant(new ChatGrant({
+      serviceSid: process.env.TWILIO_CHAT_SERVICE_SID
+    }))
 
-
-
-
-
-
-app.get('/token', function (req, res) {
-  const token = new AccessToken(
-
-    process.env.TWILIO_ACCOUNT_SID,
-    process.env.TWILIO_API_KEY,
-    process.env.TWILIO_API_SECRET,
-  )
-
-  token.identity = chance.name()
-  token.addGrant(new ChatGrant({
-    serviceSid: process.env.TWILIO_CHAT_SERVICE_SID
-  }))
-
-  res.send({
-    identity: token.identity,
-    jwt: token.toJwt()
+    console.log({
+      identity: token.identity,
+      jwt: token.toJwt()
+    })
+  
+    res.send({
+      identity: token.identity,
+      jwt: token.toJwt()
+    })
   })
+
+
+
+
+
+ // ---------------------------SMS----------------//
+ //twilio requirements -- Texting API 
+ const accountSid = 'AC27a982a83af613cbeb314036ce9be0d7';
+ const authToken = '3eb49ed284adaa07a3c0a461719494cb'; 
+ const client = new twilio(accountSid, authToken);
+ 
+ 
+
+app.use(cors()); //Blocks browser from restricting any data
+
+//Welcome Page for the Server 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Express Server')
 })
+
+//Twilio 
+app.get('/send-text', (req, res) => {
+    //Welcome Message
+    res.send('Hello to the Twilio Server')
+
+    //_GET Variables
+    const { recipient, textmessage } = req.query;
+
+//App Post 
+app.post('/sms', (req, res) => {
+    const twiml = new MessagingResponse();
+  
+    twiml.message('“Always code ”');
+  
+    res.writeHead(200, {'Content-Type': 'text/xml'});
+    res.end(twiml.toString());
+  });
+
+
+
+    //Send Text
+    client.messages.create({
+        body: textmessage,
+        to: '+15615631711',  // Text this number
+        from: '+19514337031' // From a valid Twilio number
+    }).then((message) => console.log(message.body));
+})
+
+
+
+
+
+app.listen(3040, () => console.log("Running on Port🚀 3040"))
+

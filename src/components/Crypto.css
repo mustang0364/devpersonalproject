@@ -4,17 +4,20 @@ body {
   }
   
   div#crypto-container {
-    background:white;
-    width: 70%;
-    margin: 0 auto 4px auto;
+    /* background:red; */
+    width: 40%;
+  
+    margin: 0 auto 10px auto;
     padding: 1em;
-    box-shadow: 1px 1px 0 lightgrey;
+    /* box-shadow: 1px 1px 0 lightgrey; */
   }
   
   span.left {
     font-weight: bold;
+    /* background: yellow */
   }
   
   span.right {
     float:right;
+    /* background: green; */
   }
