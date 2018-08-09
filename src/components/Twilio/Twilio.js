@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import MessageForm from './MesageForm';
+import React, { Component } from 'react'
+import MessageForm from './MessageForm'
 import MessageList from './MessageList'
 import TwilioChat from 'twilio-chat'
 import $ from 'jquery'
-import './twilioChat.css'
+import './App.css'
 
 class Twilio extends Component {
   constructor(props) {
@@ -30,7 +30,6 @@ class Twilio extends Component {
       this.addMessage({ body: 'Connecting...' })
 
       $.getJSON('/token', (token) => {
-        console.log(token)
         this.setState({ username: token.identity })
         resolve(token)
       }).fail(() => {
@@ -59,22 +58,18 @@ class Twilio extends Component {
 
           resolve(channel)
         }).catch(() => this.createGeneralChannel(chatClient))
-       
       }).catch(() => reject(Error('Could not get channel list.')))
     })
   }
 
   createGeneralChannel = (chatClient) => {
-    
     return new Promise((resolve, reject) => {
       this.addMessage({ body: 'Creating general channel...' })
       chatClient
         .createChannel({ uniqueName: 'general', friendlyName: 'General Chat' })
         .then(() => this.joinGeneralChannel(chatClient))
-        .catch((err) => console.log(err))
-        // reject(Error('Could not create general channel.')
+        .catch(() => reject(Error('Could not create general channel.')))
     })
-  
   }
 
   addMessage = (message) => {
@@ -106,7 +101,7 @@ class Twilio extends Component {
 
   render() {
     return (
-      <div className="Twilio">
+      <div className="App">
         <MessageList messages={this.state.messages} />
         <MessageForm onMessageSend={this.handleNewMessage} />
       </div>

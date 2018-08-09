@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Cuba from '../Cuba';
 
 import './sms.css';
 
@@ -30,7 +31,7 @@ class SMS extends Component {
     return (
       <div className="Sms">
         <header className="Sms-header">
-     
+          <Cuba/>
           <h1 className="Sms-title">Welcome to React</h1>
         </header>
         <div style={{ marginTop: 10 }} >

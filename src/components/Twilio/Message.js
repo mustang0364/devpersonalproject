@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from "classnames";
-import './message.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classNames from "classnames"
+import './Message.css'
 
 class Message extends Component {
   static propTypes = {

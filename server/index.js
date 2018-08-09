@@ -2,17 +2,18 @@ require('dotenv').config();
 const twilio = require ('twilio');
 const chance= new require ('chance')();
 const cors = require('cors');
-const MessagingResponse=require('twilio').twiml.MessagingResponse;
-const hhtp= require('http') //outbound text ;
-
-
-
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
+const http = require('http');
 const express = require ('express');
 const bodyParser = require ('body-parser');
 const session = require ('express-session');
 const massive = require ('massive');
 const axios = require ('axios');
 const cloudinary=require('cloudinary');
+
+
+
+
 
 
 
@@ -202,6 +203,15 @@ app.get('/send-text', (req, res) => {
   }).then((message) => console.log(message.body));
 })
 
+//--------------------Outbound-----------//
+app.post('/sms', (req, res) => {
+  const twiml = new MessagingResponse();
+
+  twiml.message('they arre comming');
+
+  res.writeHead(200, {'Content-Type': 'text/xml'});
+  res.end(twiml.toString());
+});
 
 
 
