@@ -196,7 +196,7 @@ app.get('/send-text', (req, res) => {
 
   //Send Text
   client.messages.create({
-      body: 'hello world',
+      body: textmessage,
       to: '+15615631711',  // Text this number
       from: '+19514337031' // From a valid Twilio number
   }).then((message) => console.log(message.body));

@@ -14,6 +14,7 @@ class SMS extends Component {
   sendText = _ => {
     const { text } = this.state;
     //pass text message GET variables via query string
+    //the http have to bbe the same port that you are running your server(port running 3040)
     fetch(`http://127.0.0.1:3040/send-text?recipient=${text.recipient}&textmessage=${text.textmessage}`)
     .catch(err => console.error(err))
   }
@@ -28,7 +29,7 @@ class SMS extends Component {
     }
     return (
       <div className="Sms">
-        <header className="App-header">
+        <header className="Sms-header">
      
           <h1 className="Sms-title">Welcome to React</h1>
         </header>
