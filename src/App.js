@@ -9,6 +9,7 @@ import Map from './components/Map';
 import KeepInTouch from  './components/KeepInTouch';
 import Profile from './components/Profile';
 import Logos from './components/Logos';
+import Grid from './components/SendGrid/Grid';
 
 import SMS from './components/Twilio/SMS';
 import Cuba from './components/Cuba'
@@ -110,6 +111,7 @@ class App extends Component {
         <Route path="/places" component ={Places}/>
         <Route path="/profile" component ={Profile}/>
         <Route path="/logos" component ={Logos}/>
+        <Route path="/grid" component ={Grid}/>
        
 
         <Route path="/sms" component ={SMS}/>

@@ -10,6 +10,7 @@ const session = require ('express-session');
 const massive = require ('massive');
 const axios = require ('axios');
 const cloudinary=require('cloudinary');
+const sgMail = require('@sendgrid/mail'); //sendgrid library to send emails 
 
 
 
@@ -203,16 +204,43 @@ app.get('/send-text', (req, res) => {
   }).then((message) => console.log(message.body));
 })
 
-//--------------------Outbound-----------//
+//--------------------Outbound-----------//the ./ngrok need to have the same port number that your app is running not the localhost the port//
 app.post('/sms', (req, res) => {
   const twiml = new MessagingResponse();
 
-  twiml.message('they arre comming');
+  twiml.message('i want to thank STACK Overflow for this degree');
 
   res.writeHead(200, {'Content-Type': 'text/xml'});
   res.end(twiml.toString());
 });
 
+//---------------------SendGrid---------------------//
+sgMail.setApiKey('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');
+
+app.use(cors()); //utilize Cors so the browser doesn't restrict data, without it Sendgrid will not send!
+
+// Welcome page of the express server: 
+app.get('/', (req, res) => {
+    res.send("Welcome to the Sendgrid Emailing Server"); 
+});
+
+app.get('/send-email', (req,res) => {
+    
+    //Get Variables from query string in the search bar
+    const { recipient, sender, topic, text } = req.query; 
+
+    //Sendgrid Data Requirements
+    const msg = {
+        to: recipient, 
+        from: sender,
+        subject: topic,
+        text: text,
+    }
+
+    //Send Email
+    sgMail.send(msg)
+    .then((msg) => console.log(text));
+});
 
 
 

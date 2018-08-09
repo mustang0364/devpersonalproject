@@ -4,6 +4,7 @@
   "private": true,
   "main": "server/index.js",
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "chance": "^1.0.16",
@@ -56,8 +57,6 @@
     },
     "/token": {
       "target": "http://localhost:3040"
-    
     }
-    
   }
 }
