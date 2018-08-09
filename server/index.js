@@ -180,32 +180,28 @@ app.get('/', (req, res) => {
 })
 
 //Twilio 
-app.get('/send-text', (req, res) => {
-    //Welcome Message
-    res.send('Hello to the Twilio Server')
-
-    //_GET Variables
-    const { recipient, textmessage } = req.query;
-
-//App Post 
-app.post('/sms', (req, res) => {
-    const twiml = new MessagingResponse();
-  
-    twiml.message('“Always code ”');
-  
-    res.writeHead(200, {'Content-Type': 'text/xml'});
-    res.end(twiml.toString());
-  });
-
-
-
-    //Send Text
-    client.messages.create({
-        body: textmessage,
-        to: '+15615631711',  // Text this number
-        from: '+19514337031' // From a valid Twilio number
-    }).then((message) => console.log(message.body));
+//Welcome Page for the Server 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Express Server')
 })
+
+//Twilio 
+app.get('/send-text', (req, res) => {
+  //Welcome Message
+  res.send('Hello to the Twilio Server')
+
+  //_GET Variables
+  const { recipient, textmessage } = req.query;
+
+
+  //Send Text
+  client.messages.create({
+      body: 'hello world',
+      to: '+15615631711',  // Text this number
+      from: '+19514337031' // From a valid Twilio number
+  }).then((message) => console.log(message.body));
+})
+
 
 
 
