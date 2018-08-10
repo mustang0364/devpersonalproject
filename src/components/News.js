@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Row, Col, Image } from 'react-bootstrap';
 import axios from  'axios';
 import './News.css';
+import Slides from './Animations/Slides';
 
 
 
@@ -39,7 +40,7 @@ render() {
   })
     return (
       <div>
-        <Image src="media/road.jpg" className="header-image" />
+       <Slides/>
         <Grid>
         <Crypto/>
           <h2>News</h2>

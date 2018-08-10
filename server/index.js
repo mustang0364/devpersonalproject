@@ -232,7 +232,7 @@ app.get('/send-email', (req,res) => {
 
     //Sendgrid Data Requirements
     const msg = {
-        to: recipient, 
+        to: 'abrymr@yahoo.com',  //recipient
         from: sender,
         subject: topic,
         text: text,

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Cuba from '../Cuba';
+import Grid from '../SendGrid/Grid';
 
 import './sms.css';
 
@@ -31,8 +32,8 @@ class SMS extends Component {
     return (
       <div className="Sms">
         <header className="Sms-header">
-          <Cuba/>
-          <h1 className="Sms-title">Welcome to React</h1>
+    
+         
         </header>
         <div style={{ marginTop: 10 }} >
           <h2> Send Text Message </h2>
@@ -47,6 +48,7 @@ class SMS extends Component {
             onChange={e => this.setState({ text: { ...text, textmessage: e.target.value } })} />
           <div style={spacer} />
           <button onClick={this.sendText}> Send Text </button>
+          <Grid/>
         </div>
       </div>
     );

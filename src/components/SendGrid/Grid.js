@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import './grid.css';
 
+
 class Grid extends Component {
 
   state = {
@@ -33,8 +34,8 @@ class Grid extends Component {
           <h2> Send Email </h2>
           <label> Recipient </label>
           <br />
-          <input value={email.recipient}
-            onChange={e => this.setState({ email: { ...email, recipient: e.target.value } })} />
+          {/* <input value={email.recipient}
+            onChange={e => this.setState({ email: { ...email, recipient: e.target.value } })} /> */}
           <div style={spacer} />
           <label> Sender </label>
           <br />

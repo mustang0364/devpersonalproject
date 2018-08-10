@@ -17,7 +17,7 @@ export default class KeepInTouch extends Component {
           </div>
 
 
-                <Link to ="/profile">  
+                <Link to ="/sms">  
           <div class="col-md-4 col-sm-4" >
               <div class="team-member">
                   <div class="team-img">
