@@ -10,6 +10,7 @@ import KeepInTouch from  './components/KeepInTouch';
 import Profile from './components/Profile';
 import Logos from './components/Logos';
 import Grid from './components/SendGrid/Grid';
+import Chat from './components/Socket.io/Chat';
 
 import SMS from './components/Twilio/SMS';
 import Cuba from './components/Cuba'
@@ -112,9 +113,10 @@ class App extends Component {
         <Route path="/profile" component ={Profile}/>
         <Route path="/logos" component ={Logos}/>
         <Route path="/grid" component ={Grid}/>
-       
-
+        <Route path="/chat" component ={Chat}/>
         <Route path="/sms" component ={SMS}/>
+
+       
   
         
       
@@ -122,7 +124,7 @@ class App extends Component {
        
       
      </div>
-     
+  
         </Router>
     
         </div>

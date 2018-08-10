@@ -38,6 +38,7 @@
     "react-types": "^0.1.0",
     "sendgrid": "^5.2.3",
     "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
     "twilio": "^3.19.0",
     "twilio-chat": "^3.0.2",
     "twilsock": "^0.5.5"

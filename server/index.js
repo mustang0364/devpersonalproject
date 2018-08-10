@@ -8,6 +8,7 @@ const express = require ('express');
 const bodyParser = require ('body-parser');
 const session = require ('express-session');
 const massive = require ('massive');
+var socket = require ('socket.io')
 const axios = require ('axios');
 const cloudinary=require('cloudinary');
 const sgMail = require('@sendgrid/mail'); //sendgrid library to send emails 
@@ -131,7 +132,7 @@ app.get('/auth/callback',(req,res)=>{
           };
               res.json(payload);
       })
-  //---------------------Twilio-----------------//
+  //---------------------Twilio-----------------//is not working Channel duplicate////
    
 
 
@@ -242,8 +243,27 @@ app.get('/send-email', (req,res) => {
     .then((msg) => console.log(text));
 });
 
+//------------------Socket.io---------------------///
+
+server = app.listen(3040, () => console.log("Running on Port🚀 3040"))
+
+
+io = socket(server);
+
+io.on('connection', (socket) => {
+    console.log(socket.id);
+
+    socket.on('SEND_MESSAGE', function(data){
+        io.emit('RECEIVE_MESSAGE', data);
+    })
+});
 
 
 
-app.listen(3040, () => console.log("Running on Port🚀 3040"))
+
+
+
+
+
+
 
