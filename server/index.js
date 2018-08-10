@@ -215,7 +215,7 @@ app.post('/sms', (req, res) => {
 });
 
 //---------------------SendGrid---------------------//
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
 
 app.use(cors()); //utilize Cors so the browser doesn't restrict data, without it Sendgrid will not send!
 
