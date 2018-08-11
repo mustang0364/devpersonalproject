@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import Video from './Video';
 import Havana from './places/havana/Havana';
 import Miami from './places/miami/Miami';
+
 import './Places.css'
 
 //Have all the places in a array, check the array length before mapping over it. 
@@ -72,6 +73,8 @@ export default class Places extends Component {
 
       <Havana/>
       <Miami/>
+
+     
      
       
       

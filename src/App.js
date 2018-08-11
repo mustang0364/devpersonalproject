@@ -14,6 +14,7 @@ import Chat from './components/Socket.io/Chat';
 import Slides from './components/Animations/Slides'  ;
 
 
+
 import SMS from './components/Twilio/SMS';
 import Cuba from './components/Cuba'
 
@@ -119,11 +120,13 @@ class App extends Component {
         <Route path="/sms" component ={SMS}/>
         <Route path="/slides" component ={Slides}/>
        
+    
+       
 
        
   
         
-      
+      d
     
        
       
