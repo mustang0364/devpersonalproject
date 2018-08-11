@@ -39,10 +39,10 @@ class SMS extends Component {
           <h2> Send Text Message </h2>
           <label> Your Phone Number </label>
           <br />
-          <input value={text.recipient}
+          {/* <input value={text.recipient}
             onChange={e => this.setState({ text: { ...text, recipient: e.target.value } })} />
           <div style={spacer} />
-          <label> Message </label>
+          <label> Message </label> */}
           <br />
           <textarea rows={3} value={text.textmessage} style={textArea}
             onChange={e => this.setState({ text: { ...text, textmessage: e.target.value } })} />
