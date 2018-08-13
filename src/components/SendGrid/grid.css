@@ -1,11 +1,12 @@
 .Grid {
   text-align: center;
-  background:lightblue
+  /* background:lightblue  */
 }
 
 .Grid-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation:  infinite 20s linear;
   height: 80px;
+  -webkit-animation: App-logo-spin infinite 20s linear;
 }
 
 .Grid-header {

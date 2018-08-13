@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Cuba from './Cuba';
+
 //import './NavbarCss.css'
 
 export default class CustomNavbar extends Component {
@@ -28,12 +28,12 @@ export default class CustomNavbar extends Component {
             {/* <NavItem eventKey={4} componentClass={Link} href="/map" to="/map" >
               Map
             </NavItem> */}
-            <NavItem >
+            {/* <NavItem >
                 Log In
             </NavItem>
             <NavItem>
               Log Out
-            </NavItem>
+            </NavItem> */}
             <NavItem eventKey={5} componentClass={Link} href="/keepintouch" to="/keepintouch" >
             Keep In Touch
             </NavItem>

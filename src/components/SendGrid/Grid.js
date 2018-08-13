@@ -32,8 +32,9 @@ class Grid extends Component {
       <div className="Grid">
         <div style={{ marginTop: 10 }} >
           <h2> Send Email </h2>
-          <label> Recipient </label>
+          {/* <label> Recipient </label> */}
           <br />
+      
           {/* <input value={email.recipient}
             onChange={e => this.setState({ email: { ...email, recipient: e.target.value } })} /> */}
           <div style={spacer} />

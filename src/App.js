@@ -12,6 +12,7 @@ import Logos from './components/Logos';
 import Grid from './components/SendGrid/Grid';
 import Chat from './components/Socket.io/Chat';
 import Slides from './components/Animations/Slides'  ;
+import Crunch from './components/News/Crunch';
 
 
 
@@ -98,15 +99,15 @@ class App extends Component {
             <div><pre>{secureDataResponse}</pre></div>
           </div> 
        */}
-         
+      
           <Router>
       <div>
       {/* <Video/> */}
  
      
-        <Navbar/>
+        
       
-       
+      <Navbar/>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/news" component={News} />
@@ -119,6 +120,7 @@ class App extends Component {
         <Route path="/chat" component ={Chat}/>
         <Route path="/sms" component ={SMS}/>
         <Route path="/slides" component ={Slides}/>
+        <Route path="/crunch" component ={Crunch}/>
        
     
        
