@@ -26,7 +26,7 @@ export default class Home extends Component {
 
     
         <Jumbotron>
-   
+ 
           <h2>Y.O.L.O</h2>
        
           <p className="par">"We have stopped for a moment to encounter each other, to meet, to love, to share. This is a precious moment. It is a little parenthesis in eternity."</p>
@@ -56,7 +56,7 @@ export default class Home extends Component {
    
    
         </Row>
- 
+
       </Grid>
       
     )

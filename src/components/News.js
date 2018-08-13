@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import { Grid, Row, Col, Image } from 'react-bootstrap';
 import axios from  'axios';
 import './News.css';
-import Slides from './Animations/Slides';
+import News1 from './News1';
+import News2 from './News2'
+
+
+
 
 
 
@@ -35,36 +39,52 @@ componentDidMount() {
   
 render() {
     let articles=this.state.articles.map( (e,i) => {
-      return <div key={i}>
+      return (
+      <div key={i}>
       <h3>{e.title}</h3>
-      <h3>{e.author}</h3>
+      <h4>{e.author}</h4>
       <p>{e.description}</p>
+   
+      
+
+
+
+
       
       </div>
-
+      )
 
   })
     return (
       
 <div>
-        <Slides/>
+      
         <Grid>
-         <Crypto/>
-         <h2>News</h2>
+     
+         <h1>News</h1>
           <Row>
               <Col xs={12} sm={8} className="main-section">
                <h1>Tech Crunch</h1>
-             <div>  {articles[5]} </div>
+             <div>  
+             {articles[5]} 
+             <br/>
+            
+           <h1 className="feed">BuzzFeed</h1>
+           <News1/>
+          <h1>Google News</h1>
+          <News2/>
+             
+             </div>
               
               {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> */}
               
            </Col>
              <Col xs={12} sm={4} className="sidebar-section">
               <Image src="media/beachViewr.jpg" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <Crypto/>
           </Col>
            </Row>
-       
+          
          </Grid>
       
     

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import Video from './components/Video';
+
 import Home from './components/Home';
 import Navbar from './components/CustomNavBar';
 import News from './components/News';
-import About from './components/About'
+
 import Map from './components/Map';
 import KeepInTouch from  './components/KeepInTouch';
 import Profile from './components/Profile';
@@ -12,12 +12,13 @@ import Logos from './components/Logos';
 import Grid from './components/SendGrid/Grid';
 import Chat from './components/Socket.io/Chat';
 import Slides from './components/Animations/Slides'  ;
-import Crunch from './components/News/Crunch';
+
+
 
 
 
 import SMS from './components/Twilio/SMS';
-import Cuba from './components/Cuba'
+
 
 
 import Places from './components/Places';
@@ -109,7 +110,7 @@ class App extends Component {
       
       <Navbar/>
         <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
+      
         <Route path="/news" component={News} />
         <Route path="/map" component ={Map}/>
         <Route path="/keepInTouch" component ={KeepInTouch}/>
@@ -120,7 +121,9 @@ class App extends Component {
         <Route path="/chat" component ={Chat}/>
         <Route path="/sms" component ={SMS}/>
         <Route path="/slides" component ={Slides}/>
-        <Route path="/crunch" component ={Crunch}/>
+        {/* <Route path="/crunch" component ={Crunch}/> */}
+       
+        
        
     
        
@@ -128,7 +131,7 @@ class App extends Component {
        
   
         
-      d
+      
     
        
       
