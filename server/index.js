@@ -12,6 +12,7 @@ var socket = require ('socket.io')
 const axios = require ('axios');
 const cloudinary=require('cloudinary');
 const sgMail = require('@sendgrid/mail'); //sendgrid library to send emails 
+const cC = require('./company_controller')
 
 
 
@@ -257,6 +258,14 @@ io.on('connection', (socket) => {
         io.emit('RECEIVE_MESSAGE', data);
     })
 });
+
+//-------------------------CRUD----------////
+app.get('/api/company_names', cC.read);
+app.post('/api/post_comment', cC.create);
+app.delete('/api/post_comment/:id',cC.delete);
+app.put('/api/post_comment/:id', cC.edit);
+
+
 
 
 

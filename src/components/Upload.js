@@ -69,7 +69,7 @@ export default class UploadForm extends Component {
                         onDrop={this.handleImageUpload}
                         className='dropzone'
                         >
-                        <p>Again</p>
+                       <button>Upload</button>
                     </Dropzone>
             </div>
             :
