@@ -44,13 +44,22 @@ class SMS extends Component {
           <div style={spacer} />
           <label> Message </label> */}
           <br />
-          <textarea rows={3} value={text.textmessage} style={textArea}
+          <textarea rows={1} value={text.textmessage} style={textArea}
             onChange={e => this.setState({ text: { ...text, textmessage: e.target.value } })} />
           <div style={spacer} />
           <button onClick={this.sendText}> Send Text </button>
           <Grid/>
         </div>
+
+
+
+
+
+        
       </div>
+
+
+
     );
   }
 }

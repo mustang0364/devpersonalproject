@@ -23,9 +23,9 @@ export default class CustomNavbar extends Component {
             <NavItem eventKey={3} componentClass={Link} href="/news" to="/news">
               News
             </NavItem>
-            {/* <NavItem eventKey={4} componentClass={Link} href="/map" to="/map" >
-              Map
-            </NavItem> */}
+            <NavItem eventKey={4} componentClass={Link} href="/chat" to="/chat" >
+              Chat
+            </NavItem>
             {/* <NavItem >
                 Log In
             </NavItem>
@@ -38,6 +38,12 @@ export default class CustomNavbar extends Component {
             <NavItem eventKey={6} componentClass={Link} href="/profile" to="/profile" >
             Memories
             </NavItem>
+            <NavItem eventKey={6} componentClass={Link} href="/companym" to="companym" >
+           Blog
+            </NavItem>
+            {/* <NavItem eventKey={7} componentClass={Link} href="/photo1" to="/photo1" >
+           Photo1
+            </NavItem> */}
 
           </Nav>
         </Navbar.Collapse>

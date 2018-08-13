@@ -11,8 +11,9 @@ import Profile from './components/Profile';
 import Logos from './components/Logos';
 import Grid from './components/SendGrid/Grid';
 import Chat from './components/Socket.io/Chat';
-import Slides from './components/Animations/Slides'  ;
-import CompanyM from './components/Company/CompanyM'
+
+import CompanyM from './components/Company/CompanyM';
+
 
 
 
@@ -121,9 +122,9 @@ class App extends Component {
         <Route path="/grid" component ={Grid}/>
         <Route path="/chat" component ={Chat}/>
         <Route path="/sms" component ={SMS}/>
-        <Route path="/slides" component ={Slides}/>
+        
         <Route path="/companym" component ={CompanyM}/>
-        {/* <Route path="/crunch" component ={Crunch}/> */}
+        {/* <Route path="/photo1" component ={Photo1}/> */}
        
         
        

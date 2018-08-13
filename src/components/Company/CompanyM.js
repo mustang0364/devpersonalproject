@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CompanyContainer from './CompanyContainer';
+// import Photo1 from '../Animations/Photo1'
 
 
 
@@ -92,36 +93,81 @@ render() {
                 
    <div>
       <select onChange= {(e)=> this.selectCompany(e.target.value)}>
-              <option className="twitter"> Twitter</option> 
-              <option className="facebook">Facebook</option>    
-              <option className="salesForce">SalesForce </option>
-              <option className="youtube">Youtube</option> 
-              <option className="Instagram">Instagram</option>
-              <option className="Pinterest">Pinterest</option>
-              <option className="Tesla">Tesla</option>
+              <option  className="Cuba"> Cuba</option> 
+              <option className="NewYork">NewYork</option>    
+              <option className="Malaga">Malaga</option>
+              <option className="Dominican Republic">Dominican Republic"</option> 
+              <option className="Milano">Milano</option>
+              <option className="Miami">Miami</option>
+              <option className="Madrid">Madrid</option>
 
     </select>  
   </div>
 
-  <div>
+  {/* <div>
     <p className="experience">Post Comment:</p>
-  </div>
+  </div> */}
   
   
+
+
+
+
+
+  <div>
+            <meta charSet="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+            {/*  */}
+            <br />
+            <div className="col-sm-9">
+              <h4><small>RECENT POSTS</small></h4>
+              <hr />
+              <h2>Punta Cana</h2>
+              <h5><span className="glyphicon glyphicon-time" /> Post by Mickey Mouse, Oct 1, 1928.</h5>
+              <h5><span className="label label-danger">Punta Cana</span> <span className="label label-primary">Ipsum</span></h5><br />
+              <p>Punta Cana, the easternmost tip of the Dominican Republic, abuts the Caribbean Sea and the Atlantic Ocean. It's a region known for its 32km stretch of beaches and clear waters. The Bávaro area and Punta Cana combine to form what's known as La Costa del Coco, or the Coconut Coast, an area of lavish, all-inclusive resorts. It's popular for zip-lining, windsurfing, kayaking and sailing.</p>
+              <br /><br />
+              <h4><small>RECENT POSTS</small></h4>
+              <hr />
+              <h2>Malaga</h2>
+              <h5><span className="glyphicon glyphicon-time" /> Post by James Bond, July 24, 2018.</h5>
+              <h5><span className="label label-success">Travel</span></h5><br />
+              <p>Málaga is a port city on southern Spain’s Costa del Sol, known for its high-rise hotels and resorts jutting up from yellow-sand beaches. Looming over that modern skyline are the city’s 2 massive hilltop citadels, the Alcazaba and ruined Gibralfaro, remnants of Moorish rule.</p>
+              <hr />
+              <h4>Leave a Comment:</h4>
+              <form role="form">
+                <div className="form-group">
+                  <textarea className="form-control"  onChange={(e)=>this.changeHandler(e.target.value)} rows={3} required defaultValue={""}  />
+                </div>
+                <button type="submit" className="btn btn-success">Submit</button>
+              </form>
+              <br /><br />
+            </div></div>
         
   <div>  
     <button className="postcomment in" onClick={() =>this.postComment()}>Post comment</button>
   </div>
-      <textarea className="textArea" onChange={(e)=>this.changeHandler(e.target.value)}></textarea>
+      {/* <textarea className="textArea" onChange={(e)=>this.changeHandler(e.target.value)}></textarea> */}
     <div>
       <div>{names}</div>
      
 
     </div>
+    
 </div>
+
 )    
 }
 }
 
 
 export default CompanyM;
+
+
+
+
+
+
+
+

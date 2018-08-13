@@ -95,7 +95,7 @@
 
 .snip1493 footer {
   padding: 0 25px;
-  color: #999999;
+  color:white;
   font-size: 0.8em;
   line-height: 50px;
   text-align: left;
@@ -131,8 +131,3 @@
 }
 
 
-/* Demo purposes only */
-/* 
-body {
-  background-color: #212121;
-} */

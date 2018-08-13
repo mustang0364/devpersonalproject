@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import axios from 'axios';
-import Button1 from '../Buttons/Button1/Button1'
+
 // import './upload.css'
 
 
@@ -84,7 +84,7 @@ export default class UploadForm extends Component {
                     
                 </Dropzone>
 
-              <Button1/>
+             
                <input type='file' onChange={(e) => this.handleImageUpload(e.target.files)} /> 
             </div>
             }

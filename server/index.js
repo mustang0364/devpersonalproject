@@ -237,6 +237,7 @@ app.get('/send-email', (req,res) => {
         from: sender,
         subject: topic,
         text: text,
+       
     }
 
     //Send Email
