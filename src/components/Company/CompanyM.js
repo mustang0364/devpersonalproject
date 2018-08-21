@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import CompanyContainer from './CompanyContainer';
 // import Photo1 from '../Animations/Photo1'
+import './post.css'
 
 
 
@@ -91,27 +92,19 @@ render() {
         {/* <p>Silicon Valley</p>
           <button className="animated-box in" onClick={() => this.getUserInfo}></button>  */}
                 
-   <div>
-      <select onChange= {(e)=> this.selectCompany(e.target.value)}>
-              <option  className="Cuba"> Cuba</option> 
-              <option className="NewYork">NewYork</option>    
-              <option className="Malaga">Malaga</option>
-              <option className="Dominican Republic">Dominican Republic"</option> 
-              <option className="Milano">Milano</option>
-              <option className="Miami">Miami</option>
-              <option className="Madrid">Madrid</option>
+   <div >
+   <select onChange= {(e)=> this.selectCompany(e.target.value)}>
+        <option  className="Cuba"> Cuba</option> 
+        <option className="NewYork">NewYork</option>    
+        <option className="Malaga">Malaga</option>
+        <option className="Dominican Republic">Dominican Republic</option> 
+        <option className="Milano">Milano</option>
+        <option className="Miami">Miami</option>
+        <option className="Madrid">Madrid</option>
 
-    </select>  
+</select>  
+      
   </div>
-
-  {/* <div>
-    <p className="experience">Post Comment:</p>
-  </div> */}
-  
-  
-
-
-
 
 
   <div>
@@ -130,15 +123,31 @@ render() {
               <br /><br />
               <h4><small>RECENT POSTS</small></h4>
               <hr />
+              {/* //--------------------------------comments---------------- */}
               <h2>Malaga</h2>
               <h5><span className="glyphicon glyphicon-time" /> Post by James Bond, July 24, 2018.</h5>
               <h5><span className="label label-success">Travel</span></h5><br />
               <p>Málaga is a port city on southern Spain’s Costa del Sol, known for its high-rise hotels and resorts jutting up from yellow-sand beaches. Looming over that modern skyline are the city’s 2 massive hilltop citadels, the Alcazaba and ruined Gibralfaro, remnants of Moorish rule.</p>
               <hr />
+              {/* //---------------------end of comment layout-----------------// */}
+
+              <h5 ><span className="label label-success">{this.state.company}</span></h5><br />
+        
+              <p>{this.state.comment}</p>
+
+
+
+
+
+
+
               <h4>Leave a Comment:</h4>
               <form role="form">
+              <form>
+                <textarea  className="tags" rows="1" cols="10"  placeholder="tags" br/>
+              </form>
                 <div className="form-group">
-                  <textarea className="form-control"  onChange={(e)=>this.changeHandler(e.target.value)} rows={3} required defaultValue={""}  />
+                  <textarea className="form-control"  onChange={(e)=>this.changeHandler(e.target.value)} rows={3} required defaultValue={""} />
                 </div>
                 <button type="submit" className="btn btn-success">Submit</button>
               </form>
@@ -171,3 +180,6 @@ export default CompanyM;
 
 
 
+// <div>
+
+// </div>

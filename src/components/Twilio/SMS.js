@@ -17,7 +17,8 @@ class SMS extends Component {
     const { text } = this.state;
     //pass text message GET variables via query string
     //the http have to bbe the same port that you are running your server(port running 3040)
-    fetch(`http://127.0.0.1:3040/send-text?recipient=${text.recipient}&textmessage=${text.textmessage}`)
+    fetch(`https://meetyolo.com/send-text?recipient=${text.recipient}&textmessage=${text.textmessage}`)
+    //http://127.0.0.1:3040
     .catch(err => console.error(err))
   }
 
@@ -36,7 +37,7 @@ class SMS extends Component {
          
         </header>
         <div style={{ marginTop: 10 }} >
-          <h2> Send Text Message </h2>
+          {/* <h2> Send Text Message </h2> */}
           <label> Your Phone Number </label>
           <br />
           {/* <input value={text.recipient}
